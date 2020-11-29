@@ -1,3 +1,561 @@
+/* dropdown  */
+
+.dropdown-menu  a:active {  
+  background-color: #dc377e;  
+  color: #ffffff !important; 
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Formulario de registro - login */
+
+.container.p-5{
+  top: 56%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+
+  
+}
+
+.avatar{
+  width: 530px;
+  height: 260px;
+  border: 4px ridge ;
+  
+}
+
+.login1{
+  width: 48px;
+  height: 40px;
+}
+
+.login2{
+  width: 48px;
+  height: 40px;
+}
+
+#formulario-login{
+width: 56%;
+
+}
+
+.container.p-5 h1{
+  margin: 0;
+  padding: 0 0 15px;
+  text-align: center;
+  font-size: 22px;
+  font-family: "Trebuchet MS";
+
+
+}
+
+/*.container.p-5 label{
+  margin: 0;
+  padding: 0;
+  
+
+}*/
+
+.container.p-5 input.texto{
+ width: 25%;
+ margin-bottom: 20px;
+ font-family:Georgia;
+
+}
+
+
+.container.p-5 input[type="text"],
+.container.p-5 input[type="password"] {
+  border: 1px solid #f4f6f7;
+  border-bottom: solid #fff;
+  background:white;
+  outline:invert;
+  outline-color: #D5015E;
+  width: 45%;
+  
+  height: 40px;
+  color: #000;
+  font-size: 18px;
+    
+}
+
+
+
+.container.p-5 input[type="submit"]{
+  width: 35%;
+  border: outset;
+  border-color:#d0d3d4;
+  height: 40px;
+  outline-color: #D5015E;
+ 
+
+ 
+}
+
+.container.p-5 a{
+  font-size: 15px;
+  line-height: 20px;
+  color: #D5015E;
+  font-weight: bold;
+}
+
+.texto.centro.Productos h2{
+  margin: 0;
+  padding: 0 0 16px;
+  text-align: center;
+  
+  
+}
+
+.container[type="search"]{
+  color: #000;
+
+}
+
+
+.fa_custom {
+  color: #8d9192
+  }
+
+/*----------------------------------------------------------- */
+/* Formulario de comentarios */
+
+.container-stars{
+  position: relative;
+  place-items: right;
+  text-align: center;
+  width: 340px;
+  padding: 20px 30px;
+  border: 1px solid  #ce0d61;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+  margin: auto;
+  margin-top: 100px;
+  
+
+}  
+
+div #MuestraComentarios{
+ text-align: right;
+}
+
+
+.container-stars .rate input {
+  display: none;
+}
+
+
+/*.container-stars form{
+  display: none;
+}*/
+
+
+input:checked ~ form{
+  display: block;
+}
+
+form .usuario_p {
+  
+  text-align: left;
+
+}
+
+.usuario_p input{
+  margin-bottom: 16px;
+  border: 1px solid #8d9192;
+  outline: none;
+  font-size: 17px;
+
+}
+
+
+.rate input {
+  display: none;
+  width: 100%;
+  display: none;
+  margin-bottom: 16px;
+}
+
+.rate label{
+  font-size: 20px;
+  color: #8d9192;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~label {
+    color:  #ce0d61;  
+}
+
+input:checked ~ label{
+  color:  #ce0d61;
+
+}
+
+input#star5:checked ~ label{
+  color:  #aa084e;
+  text-shadow:  0 0 20px #eb277c;
+
+}
+
+.container-stars:checked ~ form {
+  display: none;
+}
+
+input:checked ~ form {
+  display: block;
+}
+
+
+form header {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.text{
+  display: none;
+}
+
+/*form .coment{
+  height: 90px;
+  width: 100%;
+  overflow: hidden;
+
+}*/
+
+
+.usuario_p {
+  outline: none;
+  padding: 10px;
+
+}
+
+form .coment textarea{
+  outline: none;
+  border: 1px solid #abb0b1;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.container-stars .text{
+  font-size: 20px;
+  font-weight: 14px;
+  color: #aa084e;
+}
+
+.container-stars .edit {
+  position: absolute;
+  right: 10px;
+  font-size: 13px;
+  top: 5px;
+  cursor: pointer;
+  
+
+}
+
+
+.container-stars .post{
+  display: block;
+}
+
+.container-stars .edit:hover{
+  text-decoration: underline ;
+}
+
+
+.container-stars label:checked{
+  display: block; 
+}
+.container-stars .enviar{
+  display: block;
+}
+
+form .enviar{
+  height: 45px;
+  width: 100%;
+  border: 1px currentColor #8d9192;  
+  outline: none;
+  color: #D5015E;
+  transition: all 0.3s ease;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+ 
+ 
+}
+
+
+
+.container.mt-5 a:hover{
+  text-decoration: none;
+  
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/* Productos Relacionados  */
+
+ 
+ div  #productRel{   
+   display: flex;      
+   margin: 3em;
+   padding: 2em; 
+  
+   
+
+   /* #ce0d61;
+   flex-wrap: row;
+   #productRel:hover{
+ width:79%;
+ height:79%;
+  justify-content: space-around;
+  
+   border: 1px solid #8d9192;
+   display: flex;  
+
+      width: 100%;
+   height: 100%;
+
+   margin: 3em;
+   padding: 2em;
+}
+
+   
+   */
+   
+ }
+
+ div .d-block.mb-4{
+  flex-wrap: row;
+
+ }
+
+ #productRel:hover{
+  width:95%;
+  height:95%;
+
+ }
+
+
+ /*
+html #dropdown{
+  background-color:#8d9192;
+}
+
+*/
+
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Mi carrito */
+
+div #productCart{
+  display: flex;      
+  margin: 1em;
+  padding: 1.5em;
+  
+
+}
+
+#text-right{
+  float: right;
+  position: right;
+  text-align:right;
+  widows: 500px;;
+  
+}
+
+.col-sm-4{
+  display: flex;
+  margin: 1em;
+  padding: 1.5em;
+}
+
+.custom-control.custom-radio input[type='radio'] { 
+  display: none; 
+  
+} 
+
+.custom-control.custom-radio label { 
+  color: #000; 
+  font-weight: normal; 
+  
+} 
+
+.custom-control.custom-radio label:before { 
+  content: " "; 
+  display: inline-block; 
+  position: relative; 
+  top: 5px; 
+  margin: 0 5px 0 0; 
+  width: 20px; 
+  height: 20px; 
+  border-radius: 11px; 
+  border: 2px solid #5c5b5c; 
+  background-color: transparent; 
+  
+} 
+
+.custom-control.custom-radio input[type=radio]:checked + label:after { 
+  border-radius: 11px; 
+  width: 12px; 
+  height: 12px; 
+  position: absolute; 
+  top: 9px; 
+  left: 10px; 
+  content: " "; 
+  display: block; 
+  
+ /* background: #eb277c; */
+} 
+
+
+
+.custom-control-1 b{
+  color: #490449;
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/* Mi perfil*/
+
+
+
+#perfil-form{
+  border: 2px solid #aa084e;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-style: groove;
+  border-color:  #dd2374;
+  border-width: 2px;
+  box-shadow: inset 0 0 7px #dd2374;
+  margin: 80px  auto;
+  
+  
+}
+
+
+form #perfil-info{
+  padding: 0px 40px;
+  margin: 30px auto;
+}
+
+.form-label{
+  margin-bottom: 5px;
+  padding-bottom: 7px;
+  position: relative;
+  
+}
+
+
+
+.form-label label{
+  display: inline-block;
+  margin-bottom: 5px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  
+
+}
+
+.form-label input{
+  border: 1.5px solid #aa084e;
+  border-radius: 7px;
+  font-size: 14px;
+  padding: 4px;
+  width: 90%;
+}
+.form-label input:focus{
+  outline: 0;
+  border-color: #777;
+
+}
+
+.form-label.success input{
+  border-color: lightcoral;
+}
+
+.form-label i{
+  visibility: hidden;
+  position: relative;
+  top: 40px;
+  right: 10px;
+
+}
+
+/*.form-label.success i.fa-check-circle{
+
+  color: rgb(54, 158, 54);
+  visibility: visible;
+}
+
+.form-label.success i.fa-times-circle{
+  color: rgb(209, 58, 58);
+  visibility: visible;
+}*/
+
+.form-label small{
+  color: #ce0d61;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-label.error small{
+  visibility: visible;
+  
+
+}
+
+#boton-guardar{
+  position: absolute;
+  width: 130px;
+  margin: 0px 0px 80px 105px;
+  -moz-border-raduis: 3px;
+  -webkit-border-raduis: 3px;
+
+}
+
+button #boton-guardar:hover{
+  background: #eb3685;
+}
+
+button #boton-guardar:active{
+  background: #eb277c;
+}
+
+form fieldset:disabled input {
+  background-color: #e6e4e4;
+}
+
+/*form fieldset:active input{
+  background-color: #fff;
+}*/
+
+form fieldset.edit:active input{
+  background-color: rgb(228, 225, 225);
+}
+
+button #editarPerfil{
+  position: absolute;
+  
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
 .jumbotron, .card-body, .container, .site-header{
     font-family: 'Raleway', serif !important;
 }

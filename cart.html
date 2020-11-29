@@ -26,6 +26,13 @@
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
       }
+      
+    }
+
+    #productCart{
+      border-radius: 2px;
+      border-color: #d0d3d4;
+
     }
   </style>
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -40,17 +47,263 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>
+      <!--<a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a>-->
+       <!-- Dropdown-->
+    <div class="dropdown" >   
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  autocomplete="off">
+      </a>    
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" id="datos" href="my-profile.html">Mi Perfil</a>
+        <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+        <a onclick="loginOut()" class="dropdown-item" href="login.html">Cerrar sesión</a>
+      </div>
+   </div>  
+  <!---------->
     </div>
   </nav>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+  
+  <div class="container">
+    <div class="text-center p-4">
+      <h2>Mi carrito</h2>
+      <p class="lead">Lista del artículo a comprar.</p>
+    </div>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 order-md-1">
+        
+        <form class="needs-validation" id="cart-info">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+               <!-- Productos del carrito -->
+             <ul id="List-carrito" class="list-group"></ul>
+             <dd>
+               <div  id="productCart" >
+        
+              </div>
+             </dd>
+    
+              </dl>
+             <!-- <hr class="mb-4">-->
+             <hr style="border-color: darkgray; width:500px;"/>
+             <!-- Precio total -->
+  
+             <p class="text-right"  style="color: #056b5e;"><b >Total: UYU  <span id="total">  </span> </b></p>
+             <hr style="border-color: darkgray; width: 500px;"/>
+             <!--<hr class="mb-4">-->
+
+            </div>
+          </div>
+          
+                        
+          
+
+          <hr class="mb-4">
+              <h4 class="mb-3">Completar el método de envío</h4>
+              <div class="d-block my-3">
+                
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                  <div class="custom-control">
+                   <label for="direnvio"> Dirección: </label>
+                   <input id="direnvio" name="direccion"  class="dirinput" checked="" required="" placeholder="Calle, Número y Esquina">
+                  
+                   </div>
+
+                  <div class="custom-control">
+                   <label for="paisenvio"> País: </label>
+                   <input id="paisenvio" name="pais"  class="paisinput" checked="" required="" placeholder="Tu país">
+                 </div>
+                 <div class="custom-control">
+                  <label for="emailenvio"> Email: </label>
+                  <input id="emailenvio" name="email"  class="emailinput" checked="" required="" placeholder="Tu email">
+                   
+                  
+                  
+                 </div>
+                </li>
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+
+                  <div class="row">
+                    <p for=""> Elegir el tipo de envío:</p> <br>
+                  
+
+                  <div class="col" id="opciones-envios">
+                    
+                  <input id="dhl" name="publicationType" type="radio"   required="">
+                  <label  for="dhl">DHL</label> <br>
+                
+               
+                  <input id="fedex" name="publicationType" type="radio"  required="">
+                  <label for="fedex">FedEx</label> <br>
+                
+                
+                  <input id="ups" name="publicationType" type="radio" required="">
+                  <label  for="ups">UPS</label>
+                </div>
+              </div>
+
+
+                </li>
+               
+                
+             
+              <hr class="mb-4">
+              <h4 class="mb-3">Total con envío</h4>
+              <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Precio</h6>
+                      <small class="text-muted">Subtotal </small>
+                    </div>
+                    <span class="text-muted" id="productCost">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    <div>
+                      <h6 class="my-0">Costo de envío</h6>
+                      <small class="text-muted">Según el tipo de envío</small>
+                    </div>
+                    <span class="text-muted" id="envio">-</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between" style="color: #056b5e;">
+                     <b><span >Total:</span></b>
+                    <strong id="totalCost">-</strong>
+                  </li>
+                </ul>
+                <div class="row">
+                  <button type="button" class="m-1 btn btn-link" data-toggle="modal" data-target="#pagosModal" style="color:#e40365">Ver forma de pagos</button>
+                </div>
+              <hr class="mb-4">
+              <button id="boton-comprar" class="btn btn-danger" type="submit" style="background-color: #dc377e; border-color: #e40365;">Comprar</button>
+              
+              <button id="boton-cancelar" class="btn btn-danger" type="submit" style="background-color: #dc377e; border-color: #e40365;">Cancelar</button>
+            </div>
+            <div id="errorform1" style="color: red;"></div>
+ 
+            </form>
+          </div>
+        </div>
+      </div>
+        
+        </form>
+      </div>
     </div>
   </div>
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+      </p>
+        <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+        <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+
+  <div class="alert fade alert-sucess" role="alert" id="alertResult">
+    <span id="resultSpan"></span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+  
+<div class="modal fade" tabindex="-1" role="dialog" id="pagosModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action=""  class="needs-validation" id="cart-pagos">
+         <div class="modal-header">
+         <h5 class="modal-title"> Completa en la forma de pagos</h5>
+        
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+      <div class="modal-body">
+        <div class="container">
+          
+            <div class="row">
+              <!--<ul class="list-group mb-3">
+                <li class="list-group-item d-flex justify-content-between lh-condensed">
+                </li>
+
+              </ul>-->
+            <form id="forma-pagos">
+
+              <div class="custom-control-1 ">
+                
+                
+               <b><label> <input class="form-check form-check-inline "id ="tarjeta-pago" type="radio"  name="pagos" form="pago-form"  value="tarjeta" required > Tarjeta de crédito </label></b> <br><br>
+                
+              
+                <fieldset id="tarjetap">
+                  <div>
+                    <label for="tarjeta-num">Número de tarjeta: </label>
+                    <input type="text" id="tarjeta-num" name="tarjeta-num" form="pago-form" pattern="/^\d{4}-?\d{4}-?\d{4}-?\d{4}$/" placeholder="  1234-1234-1234-1234" required>   
+                  </div>
+                  <br>
+                  <div>
+                    <label for="seguridad-num">Código de seguridad: </label>
+                    <input type="text" id="seguridad-num" name="seguridad-num" form="pago-form" width="5" pattern="\d{3,4}" placeholder="  123" required>
+                  </div>
+                  <br>
+                  <div>
+                    <label for="vence-num">Vencimiento:</label>
+                    <input type="text" id="vence-num" name="vence-num" form="pago-form" pattern="\d{1,2}/\d{2,4}" placeholder="  01/22" required>
+                  </div>
+                </fieldset>
+              
+                
+              </div>
+              
+           
+            </div>
+            <hr>
+            <div class="row">
+              <div class="custom-control-1 ">
+                
+                
+                <b><label><input  class="form-check form-check-inline" id="transferencia-pago" type="radio"  name="pagos" form="banco-form"  value="transferencia" required> Transferencia bancaria </label></b><br><br>
+                <!--<label class="custom-control-label" for="tarjeta"> Transferencia bancaria</label>
+                <input id="banco" name="publicationType" type="radio" class="custom-control-input" checked="" required="">
+                
+                -->
+             
+               <fieldset id="transferencia-banco">
+              <div>
+                <label for="transferencia-num" >Número de cuenta: </label>
+                <input type="text" id="transferencia-num" name="transferencia-num" form="banco-form" pattern="\d{9,15}" placeholder="  2345678910" required>
+
+              </div>
+              <br>
+              <br>
+              
+            </fieldset>
+             
+            
+           </div>
+           <div id="errorform" style="color: red;"></div>
+
+
+        
+            </div>
+          </form>
+        
+      </div>
+
+      </div>
+      
+      <div class="modal-footer">
+        <button id="boton-listo" form="cart-pagos"  class="btn btn-danger" type="submit" style="background-color: #dc377e; border-color: #e40365;">Listo</button>
+        <!--<button type="button" class="btn btn-danger" data-dismiss="modal"  style="background-color: #dc377e;">Listo</button>-->
+        <button type="button" class="btn btn-danger" data-dismiss="modal" style="background-color: #dc377e;">Cerrar</button>
+      </div>
+    </form>
+
+    
+    </div>
+  </div>
+</div>
+
+
+   
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>

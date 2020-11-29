@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <title>eMercado - Todo lo que busques está aquí</title>
 
+  
+
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <!-- Bootstrap core CSS -->
@@ -26,6 +28,11 @@
       padding-top: 40px;
       padding-bottom: 40px;
       background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      height: 100vh;
+      
     }
 
     .signin {
@@ -34,20 +41,86 @@
       padding: 15px;
       margin: auto;
     }
+
+
+  form label{
+  margin: 0;
+  width: 98%;
+  height: 90%; 
+  display: block;
+  color: #000;
+  background: #D5015E; 
+  padding: 18px 0;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Trebuchet MS";
+  font-weight: bold;
+  
+
+}
+
+form{
+  margin: auto;
+  width: 70%;
+  height: 55%;
+  padding-bottom: 45px;
+  background: #f5f5f5;
+  border-bottom: 4px solid #D5015E;
+      
+           
+
+}
+
+
+
+
   </style>
 </head>
 
 <body class="text-center">
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
+     <!--<div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
       <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 1 (Fecha de entrega: 16/08/2020) -> Punto 3 y 4.</p>
+      <form action="login-e"></form>
       <hr>
       <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+    </div>-->
+    <img class="avatar" src="img/login.png" alt="Logo de eMercado">
+    <h1></h1>
+      <br>
+      
+      <form action="" id='formulario-login' onsubmit="submitEventHandler(event)" >
+
+        
+          <label for="">Registrarse aquí!</label> <br>
+        
+          <!-- Nombre de usuario o email-->
+          <!--<label for="Nombre de usuario o emial">Nombre de usuario o email</label> -->
+          <img class="login1" src="img/login1.png" alt=""><input class="texto" type="text" id="Nombre" placeholder="Entrar usuario o email" required >
+          <br>
+          <!-- Contraseña-->
+          <!-- <label for="Contraseña">Contraseña</label> -->
+          <img class="login2"src="img/login2.png" alt=""><input class="texto" type="password" id="Contraseña" placeholder="Entrar contraseña" required >
+
+          <br>
+          
+
+          <input type="checkbox" name="recordar"> Recordarme
+          <br>
+          <br>
+
+          <input type="submit" value="Registrarse">
+          <br>
+          
+          <a href="a">¿Olvidaste tu contraseña?</a>
+        
+
+      </form>
+    
   </div>
 
   <script src="js/init.js"></script>
   <script src="js/login.js"></script>
 </body>
 </html>
+
